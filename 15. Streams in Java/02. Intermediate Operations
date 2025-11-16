@@ -1,0 +1,19 @@
+Intermediate Operations:
+
+Intermediate Operations are the types of operations in which multiple methods are chained in a row.
+
+Characteristics of Intermediate Operations
+
+- Methods are chained together.
+- Intermediate operations transform a stream into another stream.
+- It enables the concept of filtering where one method filters data and passes it to another method after processing.
+
+
+Important Intermediate Operations:
+
+1. map 
+2. filter 
+3. sorted
+4. distinct
+5. flatMap
+6. peek

@@ -1,0 +1,182 @@
+Week 1 – Foundations
+Day 1: install java 17 windows/mac/linux + install maven gradle intellij idea
+
+Day 2: spring framework inversion of control dependency injection explained
+
+Day 3: spring boot project structure explained
+
+Day 4: spring initializr tutorial create spring boot project
+
+Day 5: springbootapplication annotation explained + spring boot application lifecycle
+
+Day 6: spring boot commandlinerunner vs applicationrunner
+
+Day 7 (Project): spring boot hello world rest api tutorial
+
+Week 2 – Core Concepts
+Day 8: spring boot bean lifecycle @component @service @repository
+
+Day 9: spring boot configuration class @bean example
+
+Day 10: spring boot autowired vs constructor injection
+
+Day 11: spring boot profiles application-dev.yml application-prod.yml
+
+Day 12: spring boot logging slf4j logback setup
+
+Day 13: spring boot conditional beans @ConditionalOnProperty
+
+Day 14 (Project): spring boot multiple profiles logging example
+
+Week 3 – REST APIs
+Day 15: spring boot @RestController vs @Controller
+
+Day 16: spring boot @PathVariable vs @RequestParam
+
+Day 17: spring boot @RequestBody ResponseEntity example
+
+Day 18: spring boot global exception handling @ControllerAdvice
+
+Day 19: spring boot validation @Valid @NotNull @Size
+
+Day 20: spring boot custom validator example
+
+Day 21 (Project): spring boot student management crud rest api
+
+Week 4 – Data Access (JPA Basics)
+Day 22: spring boot jpa entity @Entity @Table @Id
+
+Day 23: spring boot jpa repository JpaRepository tutorial
+
+Day 24: spring boot jpa derived query methods findByName
+
+Day 25: spring boot jpql query example
+
+Day 26: spring boot native query example
+
+Day 27: spring boot pagination sorting Pageable Sort
+
+Day 28 (Project): spring boot student api h2 mysql database
+
+Week 5 – Advanced JPA
+Day 29: spring boot @Transactional explained
+
+Day 30: spring boot cascade types jpa
+
+Day 31: spring boot lazy vs eager loading
+
+Day 32: spring boot one-to-one mapping example
+
+Day 33: spring boot one-to-many mapping example
+
+Day 34: spring boot many-to-many mapping example
+
+Day 35 (Project): spring boot student course relationship jpa
+
+Week 6 – Security Basics
+Day 36: spring security architecture explained
+
+Day 37: spring security authentication vs authorization
+
+Day 38: spring security in-memory authentication example
+
+Day 39: spring security jdbc authentication example
+
+Day 40: spring security role based access control @PreAuthorize
+
+Day 41: spring security csrf protection explained
+
+Day 42 (Project): spring boot secure rest api with login roles
+
+Week 7 – JWT & OAuth2
+Day 43: spring security jwt authentication tutorial
+
+Day 44: spring security jwt token generation validation
+
+Day 45: spring security jwt filter implementation
+
+Day 46: spring security oauth2 basics
+
+Day 47: spring boot oauth2 social login google github
+
+Day 48: spring boot secure rest api with jwt
+
+Day 49 (Project): spring boot student api jwt authentication
+
+Week 8 – Microservices
+Day 50: spring boot microservices vs monolith architecture
+
+Day 51: spring cloud netflix eureka service discovery
+
+Day 52: spring cloud gateway api gateway tutorial
+
+Day 53: spring boot resttemplate vs webclient
+
+Day 54: spring cloud openfeign client tutorial
+
+Day 55: spring cloud resilience4j circuit breaker example
+
+Day 56 (Project): spring boot microservices student course eureka feign
+
+Week 9 – Messaging
+Day 57: spring boot jms basics tutorial
+
+Day 58: spring boot rabbitmq integration example
+
+Day 59: spring boot kafka integration example
+
+Day 60: spring boot event driven architecture explained
+
+Day 61: spring boot @Async events example
+
+Day 62: spring boot domain events example
+
+Day 63 (Project): spring boot student enrollment event kafka rabbitmq
+
+Week 10 – Testing
+Day 64: junit 5 basics tutorial
+
+Day 65: mockito mocking tutorial
+
+Day 66: spring boot testing annotations @SpringBootTest @WebMvcTest
+
+Day 67: spring boot mockmvc rest api testing
+
+Day 68: spring boot repository testing h2 database
+
+Day 69: spring boot testcontainers tutorial
+
+Day 70 (Project): spring boot student api unit integration tests
+
+Week 11 – Deployment & Monitoring
+Day 71: spring boot package jar vs war
+
+Day 72: spring boot run java -jar command
+
+Day 73: spring boot docker tutorial
+
+Day 74: spring boot deploy aws elastic beanstalk
+
+Day 75: spring boot deploy azure app service gcp app engine
+
+Day 76: spring boot actuator endpoints tutorial
+
+Day 77 (Project): spring boot dockerize student api deploy cloud
+
+Week 12 – Advanced Topics
+Day 78: spring boot reactive programming webflux tutorial
+
+Day 79: spring boot mono flux explained
+
+Day 80: spring boot graphql basics tutorial
+
+Day 81: spring boot graphql example
+
+Day 82: spring boot caching redis tutorial
+
+Day 83: spring boot swagger openapi documentation
+
+Day 84 (Project): spring boot reactive student api swagger docs
+
+🎯 Final Capstone (Week 13)
+Days 85–90: spring boot university management system microservices project 👉 Combine Student Service, Course Service, Enrollment Service, Eureka, API Gateway, Kafka/RabbitMQ, Docker, Actuator, Swagger.

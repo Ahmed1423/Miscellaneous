@@ -1,0 +1,23 @@
+📦 What is Try-With-Resources?
+Introduced in Java 7, it automatically closes resources that implement the AutoCloseable interface — no need for a finally
+
+Example:
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class TryWithResourcesExample {
+    public static void main(String[] args) {
+        String path = "example.txt";
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            System.out.println("Error reading file: " + e.getMessage());
+        }
+    }
+}

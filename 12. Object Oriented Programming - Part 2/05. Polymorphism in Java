@@ -1,0 +1,23 @@
+Polymorphism means ability to exhibit multiple forms. It gives language the ability that allows objects to have same name but different
+functionality. 
+
+Java supports two main types of polymorphism:
+
+i) Compile-time polymorphism (Static binding): Achieved through method overloading.
+ii) Runtime polymorphism (Dynamic binding): Achieved through method overriding and dynamic method dispatch.
+
+🧮 Compile-Time Polymorphism
+Compile-time polymorphism occurs when multiple methods have the same name but differ in parameters (type, number, or order). The method to be executed
+is determined at compile time.
+
+➕ Method Overloading
+Method overloading is a form of compile-time polymorphism where multiple methods in the same class share the same name but have different parameter lists.
+
+⏱️ Runtime Polymorphism
+Runtime polymorphism occurs when a method call is resolved at runtime based on the actual object type, not the reference type. It is achieved through method overriding.
+
+🔄 Method Overriding
+Method overriding allows a subclass to provide a specific implementation of a method already defined in its superclass. The overridden method must have the same name, return type, and parameters.
+
+🎭 Dynamic Method Dispatch
+Dynamic method dispatch is the mechanism by which a call to an overridden method is resolved at runtime. It allows a superclass reference to invoke subclass methods dynamically.

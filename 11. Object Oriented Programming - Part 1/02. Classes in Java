@@ -1,0 +1,27 @@
+What is a class in Java ?
+
+A class in Java is a blueprint for creating the objects. It defines the properties and behavior that acts upon
+these properties.
+
+Syntax:
+
+class ClassName {
+
+}
+
+Instance Variables: Variables defined inside the class are called instance variables. 
+Members of class: Variables and methods defined inside the class together are called members of the class. 
+
+A class does not take any space in the memory. 
+
+Components of class: 
+
+- Access modifiers
+- class keyword
+- class name 
+- super class (if any - extends keyword)
+- interface (if any - implements keyword)
+- body {}
+  - variables
+  - constructors 
+  - methods 

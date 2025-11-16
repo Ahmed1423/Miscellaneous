@@ -1,0 +1,26 @@
+An Object is an instance of a class. It is a real world entity. It consists of three things: 
+
+1. state: represents attributes (or) properties of an object. 
+2. behavior: represents methods (or) behaviors of an object. 
+3. identity: Every object has its own unique name, which allows objects to communicate with each other. 
+
+The new operator instantiates a class by allocating memory for a new object and returning a reference to that memory.
+
+There are four ways of creating an object: 
+
+1. Using new keyword: 
+
+Person person = new Person();
+
+2. Reflection (dynamic class loading): 
+
+Class<?> s = Class.forName("Person");
+Person person = (Person) s.getDeclaredConstructor().newInstance();
+
+3. clone method 
+
+Test t = new Test();
+Test t1 = (Test) t.clone();
+
+4. Deserialization.
+

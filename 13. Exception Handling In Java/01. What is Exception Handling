@@ -1,0 +1,22 @@
+Exception handling in Java:
+
+Exception handling is a mechanism in Java that helps us to handle the runtime exceptions so that the program can continue with its desired flow.
+
+Exception hierarchy:
+
+Throwable 
+
+	Exception
+		User Defined Exception
+		Built in Exception
+			Checked Exception
+			Unchecked Exception 
+	Error
+
+Exception: Runtime Error that causes the program to deviate from the desired flow.
+
+Error: Serious problem in code that a regular application shouldn't try to handle. Example: StackOverFlowError, OutOfMemoryError
+
+Checked Exception: Checked exceptions are also called as compile time exceptions because they are handled by the compiler during the compilation time. Example: ClassNotFoundException, FileNotFoundException, IOException, SQLException
+
+Unchecked Exception: Unchecked exceptions are runtime exceptions that do not occur at the compile time but occur at the runtime. Example: ArithmeticException, NullPointerException, ArrayIndexOutOfBoundException

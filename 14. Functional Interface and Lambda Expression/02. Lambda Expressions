@@ -1,0 +1,36 @@
+Lambda Expressions can be used to represent the instances of functional interfaces. 
+
+Syntax: 
+
+- (args) -> logic;
+
+- (args) -> {
+  logic;
+  return a;
+}
+
+Types of Lambda Parameters:
+
+There are three Lambda Expression Parameters are mentioned below:
+
+1) Lambda with Zero Parameter: () -> System.out.println("Zero parameter lambda");
+2) Lambda with Single Parameter: (p) -> System.out.println("One parameter: " + p);
+3) Lambda with Multiple Parameters: (p1, p2) -> System.out.println("Multiple parameters: " + p1 + ", " + p2);
+
+interface Calculator {
+    int operation(int a, int b);
+}
+class Main {
+    public static void main(String[] args) {
+        
+        Calculator add = (a, b) -> a + b;
+        Calculator sub = (a, b) -> a - b;
+        Calculator mul = (a, b) -> a * b;
+        Calculator div = (a, b) -> a / b; 
+        
+        System.out.println(add.operation(3, 4));
+        System.out.println(sub.operation(4, 3));
+        System.out.println(mul.operation(3, 4));
+        System.out.println(div.operation(4, 3));
+    }
+}

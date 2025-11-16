@@ -1,0 +1,26 @@
+Constructor Overloading is having multiple constructors with different in number of paramters being passed.
+
+class Box {
+
+  double length;
+  double width;
+  double height;
+
+  Box() {
+    this.length = 0.0;
+    this.width = 0.0;
+    this.height = 0.0;
+  }
+
+  Box(double length, double width, double height) {
+    this.length = length;
+    this.width = width;
+    this.height = height;
+  }
+
+  public static void main(String[] args) {
+
+    Box b1 = new Box();
+    Box b2 = new Box(1.0, 2.0. 3.0);
+  }
+}

@@ -1,0 +1,5 @@
+If a superclass method throws a checked exception, the subclass must either:
+
+1) Throw the same exception
+2) Throw a narrower exception
+3) Or not throw any (if it handles it internally)

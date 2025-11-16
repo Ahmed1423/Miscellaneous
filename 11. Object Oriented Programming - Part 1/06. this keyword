@@ -1,0 +1,22 @@
+this keyword refers to the current instance (or) object. 
+
+Main purpose is to differentiate between the instance variables and local variables. 
+
+class Person {
+  String name; 
+  int age;
+
+  Person(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+
+this usecases: 
+
+- differentiate between local and instance variables. 
+- return the current instance
+- pass the current instance
+- call the method using the current instance
+- invoke current class constructor etc

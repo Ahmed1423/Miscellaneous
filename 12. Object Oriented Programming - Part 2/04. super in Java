@@ -1,0 +1,11 @@
+The super keyword in Java is a powerful tool used to refer to the immediate parent class of a subclass.
+It helps in accessing parent class members (fields, methods, constructors) that are hidden or overridden in the
+child class.
+
+1. Access Parent Class Methods
+2. Access Parent Class Fields
+3. Call Parent Class Constructor
+
+super() must be the first statement in the constructor.
+super works only with instance members and not static.
+using super to access private members is not allowed.

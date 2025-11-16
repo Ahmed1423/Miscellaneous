@@ -1,0 +1,20 @@
+A method reference is the shorthand syntax for a lambda expression that contains just one method call.
+
+class Main {
+
+    static void print(String s) {
+        System.out.println(s);
+    }
+
+    public static void main(String[] args) {
+        List<String> names = new ArrayList<>();
+        names.add("Mohammed");
+        names.add("Ahmed");
+        names.add("Khan");
+
+        names.stream().forEach(Main::print);  // ✅ Valid method reference to instance method
+        name.forEach(System.out::println);
+    }
+}
+
+Used for iterating over collections and stream operations.

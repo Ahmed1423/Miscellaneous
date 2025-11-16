@@ -1,0 +1,10 @@
+Terminal Operations:
+
+Terminal Operations are the type of Operations that return the result. These Operations are not processed further just return a final result value.
+
+Important Terminal Operations:
+
+1. collect
+2. forEach
+3. reduce
+4. count

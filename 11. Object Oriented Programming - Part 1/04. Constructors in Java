@@ -1,0 +1,65 @@
+A constructor is a special function of the class that takes the same name as that of the class with no return type.
+It is used to initialize the properties when creating an object. 
+
+A constructor cannot be final, static, abstract and synchronized. 
+A constructor can have access modifiers to control its access.
+
+Whenever we create an object using new keyword, a constructor will be called. What type of constructor is called, 
+depends on how we creating the object using new keyword. 
+
+There are four types of constructors:
+
+1. Default Constructor: Constructor that takes no arguments. Gets Called by default if doesn't exist. 
+2. Parameterized Constructor: Constructor that takes n number of arguments. Needs to be called manually
+   (depends on how we are using new keyword)
+3. Copy Constructor: Constructor that takes another object as argument to copy the data. Needs to be called manually. 
+4. Private Constructor: Restricts the instantion of the class. We cannot create an instance of class other than the 
+   class itself.Used in singleton design pattern, Utility Classes.(Example: Constants only Class)
+
+If we have manually defined the constructor, Java doesn't provide any default one. 
+
+Example: Default Constructor
+
+class Person {
+ 
+  String name;
+
+  /*
+  Person() {
+    this would be automatically created if we don't have one.
+  }
+  */
+
+  void print() {
+    System.out.println(this.name);
+  }
+
+}
+
+Example: Parameterized Constructor
+
+class Person {
+
+  String name;
+
+  Person(String name) {
+    this.name = name;
+  }
+
+}
+
+Example: Copy Constructor
+
+class Person() {
+
+  String name;
+
+  Person(Person p) {
+    this.name = p.name;
+  }
+
+}
+
+Person p1 = new Person();
+Person p2 = new Person(p1);
+

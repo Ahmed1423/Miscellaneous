@@ -1,0 +1,177 @@
+Abstraction in Java:
+
+Abstraction is one of the pillars of object-oriented programming. It hides the complexity and reveals only the essential information to the user.
+
+In Java, abstraction can be achieved in two ways:
+- Abstract classes
+- Interfaces
+
+Abstract Classes:
+
+- A class declared with the abstract keyword is called an abstract class in Java.
+- Abstract classes can contain both abstract methods (without implementation) and concrete methods (with implementation).
+- They must have at least one abstract method to be considered abstract, although it's not mandatory unless you want the class to be abstract.
+- Abstract classes can have instance variables and constructors.
+- Note: Abstract classes cannot have abstract constructors because constructors are meant to initialize objects, and abstract classes cannot be instantiated directly.
+- Cannot be instantiated directly. You cannot create an object of an abstract class. It must be subclassed, and the subclass must implement all abstract methods.
+- Can have static methods. Abstract classes can include static methods, which belong to the class rather than any instance.
+- Can extend another class. Abstract classes can extend other classes (abstract or concrete), allowing inheritance of fields and methods.
+- Can implement interfaces. Abstract classes can implement one or more interfaces, and they may choose to implement some or all of the interface methods.
+
+
+Interfaces:
+
+- An Interface is an abstract type which is used to achieve abstraction and multiple inheritance.
+- fields are public, static, final by default.
+- methods are public, abstract by default.
+- can have default, static, private methods.
+- private methods can only be called via default and static methods.
+- static methods are called via interface.
+
+- Default Methods:
+
+    - Interfaces can define methods with default implementations.
+    - Useful for adding new methods to interfaces without breaking existing implementations.
+
+
+Class (vs) Interface:
+
+i) Instantiation
+
+In class, you can create an object.
+In an interface, you can't create an object
+
+ii) Variables
+
+Class can have instance variables
+Variables are public static final (constants only).
+
+iii) Methods
+
+Class can have concrete methods
+In an interface, methods are abstract by default
+
+iv) Inheritance
+
+It supports single inheritance
+Supports multiple inheritance
+
+v) Constructors
+
+Can have constructors.
+No constructors allowed.
+
+vi) Access Modifiers
+
+Supports private, protected, public, default.
+In an interface, all members are public by default
+
+vii) Keyword
+
+Defined using class.
+Defined using interface.
+
+viii) Default Methods
+
+It does not support default methods
+It supports default methods(JDK 8+)
+
+ix) Static Methods
+
+Can have static methods.
+Supports static methods (JDK 8+)
+
+x) Private Methods
+
+Can have private methods.
+Supports private methods (JDK 9+).
+
+xi) Main Method
+
+Can have main() for execution.
+Can have main() (since JDK 8, as static methods are allowed).
+
+
+Example:
+
+abstract class Person {
+    
+    String name;
+    int age;
+    
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    
+    abstract void printDetails();
+    
+    void printWelcome() {
+        System.out.println("Welcome to");
+    }
+    
+}
+
+class Ahmed extends Person {
+    
+    String company;
+    
+    Ahmed(String name, int age, String company) {
+        super(name, age);
+        this.company = company;
+    }
+    
+    @Override
+    void printDetails() {
+        System.out.println(this.name + " " + this.age + " " + this.company);
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Ahmed a1 = new Ahmed("Ahmed Khan", 24, "Pikachu");
+        a1.printDetails();
+    }
+}
+
+Example:
+
+interface Shape {
+    void area();
+    
+    default void print() {
+        System.out.println(getData());
+    }
+    
+    static void printClassName() {
+        System.out.println("Shape");
+    }
+    
+    private String getData() {
+        return "Hello, World!";
+    }
+}
+
+class Rectangle implements Shape {
+    
+    int length;
+    int breadth;
+    
+    Rectangle(int length, int breadth) {
+        this.length = length;
+        this.breadth = breadth;
+    }
+    
+    @Override
+    public void area() {
+        System.out.println(this.length * this.breadth);
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Rectangle a1 = new Rectangle(1, 2);
+        a1.area();
+        a1.print();
+        Shape.printClassName();
+    }
+}

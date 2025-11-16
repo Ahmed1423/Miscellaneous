@@ -1,0 +1,62 @@
+Encapsulation in Java:
+
+Encapsulation is one of the pillars of object oriented programming that binds the data and the behaviour that acts upon these data into a single unit called as class.
+
+Goal of Encapsulation to hide the internal state and the implementation.
+
+We can achieve Encapsulation in Java is 
+
+1) By making the feels as private 
+2) By having public getters and setters
+
+Mechanism is access modifiers.
+
+Benefits:
+
+Security: prevents unauthorized access to internal data. 
+Flexibility: Implementation can change without affecting external code.
+Reusability: Encapsulated classes are more modular and reusable.
+
+Real World Analogy: Capsule. Medicine is inside of it, we cannot see or touch it. We can only consume the capsule.
+
+Example: 
+
+class Person {
+
+  private String name;
+  private int age;
+
+  public String getName() {
+    return name;
+  }
+
+  public int getAge() {
+    return age;
+  }
+
+  public void setName(String name) {
+
+    if(name != null) {
+      this.name = name;
+    } else {
+      this.name = "";
+    }
+  }
+
+  public void setAge(int age) {
+    this.age = age;
+  }
+
+}
+
+class Main {
+  public static void main(String[] args) {
+    Person pers = new Person();
+
+    pers.setName("Ahmed");
+    pers.setAge(24);
+
+    System.out.println(pers.getName());
+    System.out.println(pers.getAge());
+  }
+}

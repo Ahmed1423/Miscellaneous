@@ -1,0 +1,92 @@
+try: Block of code where error proned code is written.
+catch: Exception Handling Logic is written.
+finally: block of code that gets executed whether or not exception has occured. Used for cleanup/closing connections.
+throw: to manually throw an exception. 
+throws: if we do not want to handle exception via catch, we can use throws keyword in method declaration. This gives
+        clarity to developer that this method could throw following exceptions.
+
+- We can have multiple catch blocks for a single try.
+- We can have nested try catch
+- catch and finally are not mandatory when try is used, one of them is required.
+- You can combine exceptions in a single catch block.
+- we can create user defined exceptions.
+
+Example 1:
+
+try{
+    int a[] = new int[2];
+    System.out.println("Access element three :" + a[3]);
+} catch (ArrayIndexOutOfBoundsException e) {
+    System.out.println("Exception thrown  :" + e);
+}
+
+Example 2:
+
+ try {
+      int a[] = new int[2];
+      int b = 0;
+      int c = 1/b;
+      System.out.println("Access element three :" + a[3]);         
+}
+catch (ArrayIndexOutOfBoundsException e) {
+     System.out.println("ArrayIndexOutOfBoundsException thrown  :" + e);
+}catch (Exception e) {
+     System.out.println("Exception thrown  :" + e);
+}
+
+Example 3:
+
+try {
+  int a[] = new int[2];
+  int b = 0;
+  int c = 1/b;
+  System.out.println("Access element three :" + a[3]);         
+}
+catch (ArrayIndexOutOfBoundsException | ArithmeticException e) {
+  System.out.println("Exception thrown  :" + e);
+}
+
+Example 4:
+
+public class DivisionExample {
+
+    // Method that declares it might throw ArithmeticException
+    public static int divide(int a, int b) throws ArithmeticException {
+        if (b == 0) {
+            throw new ArithmeticException("Cannot divide by zero");
+        }
+        return a / b;
+    }
+
+    public static void main(String[] args) {
+        try {
+            int result = divide(10, 0); // This will trigger the exception
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}
+
+
+Example 5:
+
+public class ThrowExample {
+
+    public static int divide(int a, int b) {
+        if (b == 0) {
+            // Manually throwing an unchecked exception
+            throw new ArithmeticException("Division by zero is not allowed");
+        }
+        return a / b;
+    }
+
+    public static void main(String[] args) {
+        try {
+            int result = divide(10, 0);
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("Caught exception: " + e.getMessage());
+        }
+    }
+}

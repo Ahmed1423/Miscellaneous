@@ -1,0 +1,84 @@
+Functional interface:
+
+Functional interface is an interface that contains only one abstract method, it can have multiple default or static methods but only one abstract method.
+
+@FunctionalInterface Annotation: 
+
+Indicates that interface can have only abstract method. If we try to add one more, compiler flags the issue. It is optional but is used as
+a good practice. 
+
+Built in functional interfaces:
+
+- Runnable
+- callable
+- comparable 
+
+Types of functional interfaces:  
+
+There are four main types of functional interfaces:
+
+1. Predicate: It takes one argument as input and returns a Boolean result. 
+   Syntax:  Predicate<T> predicate = x -> x % 2 == 0;
+
+2. Consumer: It takes one argument as input and doesn't return anything
+   Syntax:  Consumer<T> consumer = x -> System.out.println(x);
+
+3. Supplier: It does not take any argument as input and returns a value
+   Syntax:  Supplier<T> supplier = () -> "Hello, World";
+
+4. Function: It takes one argument as input and returns another argument
+   Syntax:  Function<T, U> function = x -> x * x;
+
+Example 1: 
+
+import java.util.function.*;
+
+class Main {
+    public static void main(String[] args) {
+        
+        Predicate<Integer> isEven = x -> x % 2 == 0;
+        
+        System.out.println(isEven.test(4));
+        System.out.println(isEven.test(3));
+    }
+}
+
+Example 2: 
+
+import java.util.function.*;
+
+class Main {
+    public static void main(String[] args) {
+        
+        Consumer<String> printName = name -> System.out.println(name);
+        printName.accept("Ahmed");
+        printName.accept("abcde");
+    }
+}
+
+Example 3:
+
+import java.util.function.*;
+
+class Main {
+    public static void main(String[] args) {
+        
+        Supplier<String> language = () -> "Java";
+        
+        System.out.println(language.get());
+    }
+}
+
+Example 4:
+
+import java.util.function.*;
+
+class Main {
+    public static void main(String[] args) {
+        
+        Function<Integer, Integer> square = x -> x * x;
+        
+        System.out.println(square.apply(6));
+        System.out.println(square.apply(8));
+    }
+}
